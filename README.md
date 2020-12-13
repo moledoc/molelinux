@@ -55,6 +55,7 @@ Also presents a list of most commonly used programs, fonts etc.
 * redshift
 * hermit-font
 * gruvbox colorscheme
+* xbindkeys/sxhkd
 
 ### also include in list?
 
