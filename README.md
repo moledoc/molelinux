@@ -47,12 +47,24 @@ Also presents a list of most commonly used programs, fonts etc.
 
 * doas over sudo, but if there is no doas option sudo works fine. Also, for doas and sudo both I use nopass option (using doas/sudo doesn't require password). Just my preference.
 * xterm
+* zsh (zsh-syntax-highlighting)
 * nvim
 * firefox
+* fzf (also use as launcher; (?) use as fuzzy grep)
+* keepassxc
 * redshift
 * hermit-font
 * gruvbox colorscheme
-* 
+
+### also include in list?
+
+* nitrogen
+* zathura (zathura-pdf-mupdf)
+* mpv/vlc(?)
+* fd (replace find)
+* ripgrep (replace grep)
+* pcmanfm/thunar/dolphin
+* vscode
 
 ## TODO
 
