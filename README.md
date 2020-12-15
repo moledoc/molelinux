@@ -108,7 +108,7 @@ Also presents a list of most commonly used programs, fonts etc.
 * program: ripgrep (replacement for grep; faster)
 * program: (any gui filemanager is fine (nemo,thunar,pcmanfm,dolphin))
 * program: nitrogen (if there is no wallpaper handling in the DE or WM)
-* program: zathura (zathura-pdf-mupdf; for viewing pdf's)
+* program: zathura (zathura-pdf-mupdf/-poppler; for viewing pdf's)
 * program: mpv (video and audio files); vlc for backup(?), explore mpd for music(?)
 * program: vscode(?) (and what extensions, if use this) <!--- TODO --->
 * program: tmux (multiplexer)
