@@ -63,7 +63,7 @@ alias cfp="$EDITOR $HOME/.zprofile"
 alias cfv="$EDITOR $HOME/.config/nvim/init.vim"
 #alias cfv="$EDITOR $HOME/.vimrc"
 
-alias cfx="$EDITOR $HOME/.config/X/.Xresources"
+alias cfx="$EDITOR $HOME/.Xresources"
 #alias cfcoc="$EDITOR $HOME/.config/nvim/coc-settings.json"
 
 # Shortcut for sourcing config files.
@@ -72,7 +72,7 @@ alias srca="source $HOME/.config/zsh/.zaliases"
 alias srce="source $HOME/.config/zsh/.zshenv"
 alias srcp="source $HOME/.zprofile"
 alias srcv="source $HOME/.config/nvim/init.vim"
-alias srcx="xrdb -merge $HOME/.config/X/.Xresources;xrdb -load $HOME/.config/X/.Xresources"
+alias srcx="xrdb -merge $HOME/.Xresources;xrdb -load $HOME/.Xresources"
 
 # Shorcut to todo file
 alias todo="$EDITOR $HOME/todo"

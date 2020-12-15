@@ -26,7 +26,7 @@ XTerm*pointerColorBackground: white
 
 ! Font
 XTerm*faceName: Hermit-Regular
-XTerm*faceSize: 9
+XTerm*faceSize: 10
 
 ! Increase font size
 !XTerm.vt100.translations: #override \n\

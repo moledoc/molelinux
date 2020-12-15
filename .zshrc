@@ -37,7 +37,7 @@ export KEYTIMEOUT=1
 
 source $HOME/.config/zsh/.zaliases
 source $HOME/.config/zsh/.zPmAliases
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Edit command in vim w/ ctrl-e
 autoload edit-command-line; zle -N edit-command-line

@@ -56,7 +56,7 @@ then
 fi
 
 cp -r .scripts .config $HOME
-cp * $HOME
+cp .setup.sh .x* .X* .z* $HOME
 
 echo "Repo contents copied to $HOME, $HOME/.scripts and $HOME/.config"
 
