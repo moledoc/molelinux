@@ -80,8 +80,8 @@ alias todo="$EDITOR $HOME/todo"
 #	######
 #	Status
 
-alias sd="doas shutdown now"
-alias rb="doas reboot"
+alias sd="sudo shutdown now"
+alias rb="sudo reboot"
 #alias sleep=""
 
 ## This is not shorter, but is more memorable.
