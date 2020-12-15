@@ -17,25 +17,64 @@ dd if=<path to iso> of=/dev/sdX status="progress"
 ## After installation
 
 * Boot into system
-* If git is not on the system, install it.
-* Go to $HOME/Documents/ and run
+* Change sudo/doas permissions for user. As root
 
 ```sh
+visudo # for sudo
+# comment in line
+# %wheel ALL=(ALL) NOPASSWD: ALL
+echo "permit <user> nopass" > /usr/etc/doas.conf # for doas
+
+# The above is the authors preference.
+# If it is too unsecure for some, use
+ 
+visudo # for sudo
+# comment in line
+# %wheel ALL=(ALL) ALL
+echo "permit <user> pass" > /usr/etc/doas.conf # for doas (check doas manual for this option)
+```
+
+* Log out as root, log in as <user>.
+* update package manager, eg
+
+```sh
+sudo pacman -Syu # Arch based
+sudo apt update; sudo apt upgrade # Debian(/Ubuntu) based
+```
+
+* If git is not on the system, install it.
+
+```sh
+sudo pacman -S git # Arch based
+sudo apt install git # Debian(/Ubuntu) based
+```
+
+* Go to $HOME/Documents/ and clone molelinux repository.
+
+```sh
+cd $HOME/Documents
 git clone https://github.com/moledoc/molelinux.git
 ```
 
 * Run the setup script.
 
+	* includes downloading some programs;
+	* changing user shell (to do it manually, check the script);
+	* CURRENTLY SET FOR DEBIAN BASED DISTRIBUTION!!!
+
 ```sh
 cd molelinux
-sh .setup.sh
+sh .setup.sh "package manager + install"
+# eg
+# sh .setup.sh "pacman -S"
+# sh .setup.sh "apt install"
 ```
 
 * check with package manager is used and make symbolic link to correct aliases file. For example
 
 ```sh
-ln -s $HOME/.config/zsh/.zPkgAliases $HOME/.config/zsh/.aptAliases
-ln -s $HOME/.config/zsh/.zPkgAliases $HOME/.config/zsh/.pacmanAliases
+ln -s $HOME/.config/zsh/.zPmAliases $HOME/.config/zsh/.aptAliases # Debian based
+ln -s $HOME/.config/zsh/.zPmAliases $HOME/.config/zsh/.pacmanAliases # Arch based
 ```
 
 * The general setup should be done. Some tweaking might be necessary, but it is not covered in this readme.
@@ -46,26 +85,37 @@ This subsection describes authors preferences in programs.
 Also presents a list of most commonly used programs, fonts etc.
 
 * doas over sudo, but if there is no doas option sudo works fine. Also, for doas and sudo both I use nopass option (using doas/sudo doesn't require password). Just my preference.
-* xterm
-* zsh (zsh-syntax-highlighting)
-* nvim
-* firefox
-* fzf (also use as launcher; (?) use as fuzzy grep)
-* keepassxc
-* redshift
-* hermit-font
-* gruvbox colorscheme
-* xbindkeys/sxhkd
+* program: xterm
 
-### also include in list?
+	* program: tilda (for drop down menu -- Test it)
 
-* nitrogen
-* zathura (zathura-pdf-mupdf)
-* mpv/vlc(?)
-* fd (replace find)
-* ripgrep (replace grep)
-* pcmanfm/thunar/dolphin
-* vscode
+* program: zsh (zsh-syntax-highlighting)
+* program: neovim(nvim)/vim
+* program: firefox
+	
+	* vim bindings pluggin
+	* duckduckgo pluggin
+	* addblock (eg ublock) pluggin
+	* privacybadger plugin
+	* change privacy settings
+
+* program: fzf (also use as launcher; (?) use as fuzzy grep)
+* program: keepassxc (password manager)
+* program: redshift
+* program: xbindkeys/sxhkd
+* program: htop
+* program: fd-find (replacement for find; faster)
+* program: ripgrep (replacement for grep; faster)
+* program: (any gui filemanager is fine (nemo,thunar,pcmanfm,dolphin))
+* program: nitrogen (if there is no wallpaper handling in the DE or WM)
+* program: zathura (zathura-pdf-mupdf; for viewing pdf's)
+* program: mpv (video and audio files); vlc for backup(?), explore mpd for music(?)
+* program: vscode(?) (and what extensions, if use this) <!--- TODO --->
+* program: tmux (multiplexer)
+
+* font: fonts-hermit (might have different package name)
+* colorscheme: gruvbox colorscheme
+* options: swap caps and esc (not needed if programmable keyboard), setxkbmap -option caps:swapescape 
 
 ## TODO
 
