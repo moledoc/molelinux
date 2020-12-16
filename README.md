@@ -85,12 +85,12 @@ This subsection describes authors preferences in programs.
 Also presents a list of most commonly used programs, fonts etc.
 
 * doas over sudo, but if there is no doas option sudo works fine. Also, for doas and sudo both I use nopass option (using doas/sudo doesn't require password). Just my preference.
-* program: xterm
+* program: default (+ xterm just in case)
 
-	* program: tilda (for drop down menu -- Test it)
+	* program: drop down eg. guake, tilda
 
 * program: zsh (zsh-syntax-highlighting)
-* program: neovim(nvim)/vim
+* program: neovim(nvim)/vim (quick edits)
 * program: firefox
 	
 	* vim bindings pluggin
@@ -110,7 +110,7 @@ Also presents a list of most commonly used programs, fonts etc.
 * program: nitrogen (if there is no wallpaper handling in the DE or WM)
 * program: zathura (zathura-pdf-mupdf/-poppler; for viewing pdf's)
 * program: mpv (video and audio files); vlc for backup(?), explore mpd for music(?)
-* program: vscode(?) (and what extensions, if use this) <!--- TODO --->
+* program: IDE for development (corresponding to the language, eg RStudio)
 * program: tmux (multiplexer)
 
 * font: fonts-hermit (might have different package name)

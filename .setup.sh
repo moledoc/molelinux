@@ -7,20 +7,8 @@ updateCmd="sudo apt update;sudo apt upgrade"
 installCmd="apt install"
 
 # Download packages.
-packages="xterm zsh zsh-syntax-highlighting vim firefox fzf keepassxc redshift xbindkeys htop fd-find ripgrep zathura zathura-pdf-poppler mpv tmux" #vscode
-additional_pkg="neovim tilda vlc nitrogen thunar" 
-
-## vscode in debian based distribution
-#case "$installCmd" in
-#	apt*)
-#	curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-#	sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-#	sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-#	sudo apt install apt-transport-https
-#	sudo apt install code
-#	;;
-#esac
-
+packages="xterm zsh zsh-syntax-highlighting vim firefox fzf keepassxc redshift xbindkeys htop fd-find ripgrep zathura zathura-pdf-poppler mpv tmux"
+additional_pkg="neovim guake vlc nitrogen nemo" #tilda
 
 if [ ! -z "$installCmd" ]
 then
