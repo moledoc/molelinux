@@ -44,9 +44,10 @@ then
 fi
 
 cp -r .scripts .config $HOME
-cp .setup.sh .x* .X* .z* $HOME
+# cp .setup.sh .x* .X* .z* $HOME
+cp .* $HOME
 
-echo "Repo contents copied to $HOME, $HOME/.scripts and $HOME/.config"
+echo "Repo contents copied to $HOME"
 
 # add symlink to package manager aliases
 ln -s $HOME/.config/$new_shell/.zAptAliases $HOME/.config/$new_shell/.zPmAliases
