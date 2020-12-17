@@ -66,9 +66,9 @@ echo "Add gruvbox colorscheme to vim colors"
 sudo cp $HOME/.config/nvim/plugged/gruvbox/colors/gruvbox.vim /usr/share/vim/vim81/colors
 
 
-# make guake dropdown terminal autostarting
-echo "Make guake dropdown terminal autostarting"
-sudo cp /usr/share/applications/guake.desktop /etc/xdg/autostart
+# # make guake dropdown terminal autostarting
+# echo "Make guake dropdown terminal autostarting"
+# sudo cp /usr/share/applications/guake.desktop /etc/xdg/autostart
 
 echo "Setup DONE!"
 
