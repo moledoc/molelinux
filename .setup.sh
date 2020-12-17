@@ -2,6 +2,10 @@
 
 # README: setup user system, after git pull.
 
+# Set up root passwd
+echo "Set root passwd"
+sudo passwd
+
 # update repository
 updateCmd="sudo apt update;sudo apt upgrade"
 installCmd="apt install"
