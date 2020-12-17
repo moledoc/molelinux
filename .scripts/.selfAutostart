@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# README: until I dig out how to add the autostarts to xinit or xsessions so that DE also grabs them, I'll start following processes manually via this script.
+
+xrdb -merge $HOME/.Xresources; xrdb -load $HOME/.Xresources &
+#xsetroot -cursor_name left_ptr& # cursor
+setxkbmap -option caps:swapescape
+#nitrogen --restore &
+#xbindkeys -p &
+firefox &
+
+gruvbox_script='$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh'
+if [ -e "$gruvbox_script" ]
+then
+  sh $gruvbox_script &
+fi
+ 

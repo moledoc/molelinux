@@ -2,9 +2,13 @@
 
 # README: Update the current build to set git repo directory.
 
+# run readmeGen
+sh $HOME/.scripts/readmeGen
+
+# define repository location
 repo=$HOME/Documents/molelinux
 
 cp -RL $HOME/.config/zsh $repo/.config
 cp -RL $HOME/.scripts $repo/
 
-cp $HOME/.setup.sh $HOME/.xinitrc $HOME/.Xresources $HOME/.zprofile $HOME/.zshrc $HOME/README.md $HOME/.xbindkeysrc $repo
+cp $HOME/.setup.sh $HOME/.vimrc $HOME/.xinitrc $HOME/.Xresources $HOME/.zprofile $HOME/.zshrc $HOME/README.md $HOME/.xbindkeysrc $repo

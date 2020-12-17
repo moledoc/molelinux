@@ -52,5 +52,23 @@ echo "Repo contents copied to $HOME, $HOME/.scripts and $HOME/.config"
 ln -s $HOME/.config/$new_shell/.zAptAliases $HOME/.config/$new_shell/.zPmAliases
 echo "Symlink to package manager aliases created"
 
+# install VimPlug (nvim/vim pluggin manager)
+echo "Install VimPlug to $HOME/.config/nvim/plugged"
+mkdir -p $HOME/.config/nvim/plugged
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs\
+	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+echo "Run PlugInstall, to install defined pluggins to neovim"
+nvim +PlugInstall +qa
+
+# add gruvbox for vim as well
+echo "Add gruvbox colorscheme to vim colors"
+sudo cp $HOME/.config/nvim/plugged/gruvbox/colors/gruvbox.vim /usr/share/vim/vim81/colors
+
+
+# make guake dropdown terminal autostarting
+echo "Make guake dropdown terminal autostarting"
+sudo /usr/share/applications//guake.desktop /etc/xdg/autostart
+
 echo "Setup DONE!"
 

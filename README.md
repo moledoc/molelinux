@@ -60,7 +60,7 @@ git clone https://github.com/moledoc/molelinux.git
 
 	* includes downloading some programs;
 	* changing user shell (to do it manually, check the script);
-	* CURRENTLY SET FOR DEBIAN BASED DISTRIBUTION!!!
+	* **CURRENTLY SET FOR DEBIAN BASED DISTRIBUTION!!!**
 
 ```sh
 cd molelinux
@@ -102,25 +102,32 @@ Also presents a list of most commonly used programs, fonts etc.
 * program: fzf (also use as launcher; (?) use as fuzzy grep)
 * program: keepassxc (password manager)
 * program: redshift
-* program: xbindkeys/sxhkd
+* program: xbindkeys/sxhkd or WM/DE default keybindings editor.
 * program: htop
 * program: fd-find (replacement for find; faster)
 * program: ripgrep (replacement for grep; faster)
 * program: (any gui filemanager is fine (nemo,thunar,pcmanfm,dolphin))
 * program: nitrogen (if there is no wallpaper handling in the DE or WM)
 * program: zathura (zathura-pdf-mupdf/-poppler; for viewing pdf's)
-* program: mpv (video and audio files); vlc for backup(?), explore mpd for music(?)
-* program: IDE for development (corresponding to the language, eg RStudio)
+* program: mpv (video and audio files); vlc for backup, explore mpd for music(?)
+* program: IDE for development (corresponding to the language, eg RStudio,Intellij)
 * program: tmux (multiplexer)
 
 * font: fonts-hermit (might have different package name)
 * colorscheme: gruvbox colorscheme
 * options: swap caps and esc (not needed if programmable keyboard), setxkbmap -option caps:swapescape 
 
+## Main keybindings
+
+* **TODO**
+
 ## TODO
 
 * improve this README
 * make this build
+	
+	* port conf files (for nvim, vim etc)
+
 * Keep this build up-to-date
 
 ## Author
