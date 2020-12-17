@@ -12,8 +12,9 @@ additional_pkg="neovim guake vlc nitrogen nemo" #tilda
 
 if [ ! -z "$installCmd" ]
 then
-	echo "Installed packages: $packages $additional_pkg"
+	echo "Installing packages: $packages $additional_pkg"
 	sudo $installCmd $packages $additional_pkg
+  echo "Packages installed"
 else
 	echo "Missing argument, exiting script!"
 	exit
@@ -29,25 +30,19 @@ echo "Changing shell to $new_shell"
 chsh -s /bin/$new_shell
 echo "Shell changed to $new_shell"
 
+# set up git
+echo "Setting up git for user"
+echo "Insert git --global user.name: " varUsername
+git config --global user.name "$varUsername"
+echo "Insert git --global user.email: " varEmail
+git config --global user.email "$varEmail"
+echo "Minimal git config set up"
+
 # Copy contents of the repository to the right places.
-# Make dir/ if necessary.
-
-#if [ ! -d $HOME/.scripts ]
-#then
-#	mkdir $HOME/.scripts
-#	echo "Created $HOME/.scripts"
-#fi
-if [ ! -d $HOME/.config ]
-then
-	mkdir $HOME/.config
-	echo "Created $HOME/.config"
-fi
-
 cp -r .scripts .config $HOME
 # cp .setup.sh .x* .X* .z* $HOME
 cp .* $HOME
-
-echo "Repo contents copied to $HOME"
+echo "Repository contents copied to $HOME"
 
 # add symlink to package manager aliases
 ln -s $HOME/.config/$new_shell/.zAptAliases $HOME/.config/$new_shell/.zPmAliases
