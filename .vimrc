@@ -3,6 +3,7 @@ let mapleader = ";"
 let maplocalleader = "\\"
 
 "colorscheme
+colorscheme gruvbox
 set background=dark
 set termguicolors
 

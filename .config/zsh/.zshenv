@@ -2,7 +2,7 @@
 # Export variables
 export PATH=$PATH:$HOME/.scripts
 export XDG_CONFIG_HOME=$HOME/.config
-export EDITOR=vim
+export EDITOR=nvim
 export TERM=xterm
 export TERM_EXEC="$TERM -e" 
 export TERMINAL=$TERM
