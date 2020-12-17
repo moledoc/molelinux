@@ -68,7 +68,7 @@ sudo cp $HOME/.config/nvim/plugged/gruvbox/colors/gruvbox.vim /usr/share/vim/vim
 
 # make guake dropdown terminal autostarting
 echo "Make guake dropdown terminal autostarting"
-sudo /usr/share/applications/guake.desktop /etc/xdg/autostart
+sudo cp /usr/share/applications/guake.desktop /etc/xdg/autostart
 
 echo "Setup DONE!"
 

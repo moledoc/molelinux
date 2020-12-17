@@ -64,10 +64,10 @@ git clone https://github.com/moledoc/molelinux.git
 
 ```sh
 cd molelinux
-sh .setup.sh "package manager + install"
-# eg
-# sh .setup.sh "pacman -S"
-# sh .setup.sh "apt install"
+sudo sh .setup.sh
+# works without sudo as well,
+# but user then needs to input his/her passwords,
+# since sudo is used inside the script.
 ```
 
 * check with package manager is used and make symbolic link to correct aliases file. For example
@@ -75,7 +75,7 @@ sh .setup.sh "package manager + install"
 ```sh
 ln -s $HOME/.config/zsh/.zPmAliases $HOME/.config/zsh/.aptAliases # Debian based
 ln -s $HOME/.config/zsh/.zPmAliases $HOME/.config/zsh/.pacmanAliases # Arch based
-```
+```/
 
 * The general setup should be done. Some tweaking might be necessary, but it is not covered in this readme.
 
