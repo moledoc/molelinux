@@ -4,6 +4,7 @@
 
 # file full path, filename and extension.
 file=$(fzfOpen)
+echo $file
 filename=${file##*\/}
 extension=${filename##*\.}
 
@@ -37,7 +38,7 @@ case "$file" in
     exit
     ;;
   *.py|*.hs|*.txt|*.csv|*.md)
-    $EDITOR $file &
+    $TERM -e "$EDITOR $file"
     exit
     ;;
 esac
@@ -45,15 +46,15 @@ esac
 
 # If it weren't any case,
 # then check if it is a shell script.
-# if yes, then either edit, launch, focus.
+# if yes, then either edit or launch
 if [ "$extension" = "$filename" ] || [ "$extension" = "*sh" ]
 then
-  action=$(echo "(e)dit\n(l)aunch" | fzf -i)
-  if [ "$action" = "launch" ]
+  if [ "$1" = "launch" ]
   then
     $file &
-  elif [ "$action" = "edit" ]
-    $EDITOR $file &
+  elif [ "$1" = "edit" ]
+  then
+    $TERM -e "$EDITOR $file"
   fi
   exit
 fi
