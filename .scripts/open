@@ -1,31 +1,59 @@
 #!/bin/zsh
 
-# README: Script to open given file with defined default opener, depending on the file extension.
+# README: Script to open or focus given file with defined default opener, depending on the file extension.
 
-# The first parameter is the filename from fzfOpen
+# file full path, filename and extension.
+file=$(fzfOpen)
+filename=${file##*\/}
+extension=${filename##*\.}
 
-exclude='.git|.mozilla|.cache|.npm|.cargo|.ghc|.stack|.local|.pki|.pylint|.ipython|.jupyter'
+# check if file param is empty
+if [ -z $file ]
+then
+  exit
+fi
 
-# extension=${1##*\.}
-
-case "$1" in
+# check if file param contains defined cases. 
+# If yes, then do according to case.
+case "$file" in
   */bin/*)
-    $1 &
+    $file &
+    exit
     ;;
   *.R|*.Rmd)
-    rstudio $1
+    rstudio $file &
+    exit
     ;;
   *.pdf)
-    zathura $1
+    zathura $file &
+    exit
     ;;
   *.mp3|*.mp4)
-    mpv $1
+    mpv $file &
+    exit
     ;;
   *.jpg|*.jpeg|*.png)
-    xviewer $1
+    $IMAGES $file &
+    exit
     ;;
   *.py|*.hs|*.txt|*.csv|*.md)
-    $EDITOR $1
+    $EDITOR $file &
+    exit
     ;;
 esac
 
+
+# If it weren't any case,
+# then check if it is a shell script.
+# if yes, then either edit, launch, focus.
+if [ "$extension" = "$filename" ] || [ "$extension" = "*sh" ]
+then
+  action=$(echo "(e)dit\n(l)aunch" | fzf -i)
+  if [ "$action" = "launch" ]
+  then
+    $file &
+  elif [ "$action" = "edit" ]
+    $EDITOR $file &
+  fi
+  exit
+fi

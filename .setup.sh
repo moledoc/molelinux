@@ -12,8 +12,9 @@ installCmd="apt install"
 
 # Download packages.
 packages="xterm zsh zsh-syntax-highlighting guake neovim vim firefox fzf keepassxc redshift xbindkeys htop fd-find ripgrep zathura zathura-pdf-poppler mpv tmux nemo"
-additional_pkg="vlc nitrogen dconf-cli" #tilda
+additional_pkg="vlc nitrogen dconf-cli wmctrl" #tilda
 # dconf-cli to load cinnamon keyboard shortcuts in/out
+# wmctrl to list window processes
 
 if [ ! -z "$installCmd" ]
 then

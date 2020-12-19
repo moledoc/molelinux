@@ -14,7 +14,7 @@ export HISTCONTROL=ignoreboth
 ## Set some defaults for opening programs.
 ## Defined for usage in scripts.
 export FILEMANAGER=nemo
-#export IMAGES=sxiv
+export IMAGES=xviewer #sxiv
 export MEDIA=mpv
 export READER=zathura
 
