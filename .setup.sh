@@ -29,6 +29,9 @@ setxkbmap -option caps:swapescape
 echo "CapsLock and escape swapped"
 
 # change shell to zsh
+# echo "What user's shell do we change?"
+# read user
+# # TODO: check if user exists
 new_shell="zsh"
 echo "Changing shell to $new_shell"
 chsh -s /bin/$new_shell
@@ -36,9 +39,11 @@ echo "Shell changed to $new_shell"
 
 # set up git
 echo "Setting up git for user"
-echo "Insert git --global user.name: " varUsername
+echo "Insert git --global user.name: " 
+read varUsername
 git config --global user.name "$varUsername"
-echo "Insert git --global user.email: " varEmail
+echo "Insert git --global user.email: " 
+read varEmail
 git config --global user.email "$varEmail"
 echo "Minimal git config set up"
 

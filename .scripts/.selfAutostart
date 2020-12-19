@@ -9,6 +9,7 @@ setxkbmap -option caps:swapescape
 #xbindkeys -p &
 firefox &
 guake --restore-preferences $HOME/.config/guake/.guakeconf &
+guake &
 
 gruvbox_script='$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh'
 if [ -e "$gruvbox_script" ]
