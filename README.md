@@ -20,9 +20,10 @@ dd if=<path to iso> of=/dev/sdX status="progress"
 * Change sudo/doas permissions for user. As root
 
 ```sh
-visudo # for sudo
+EDITOR=vi;visudo # for sudo
 # comment in line
 # %wheel ALL=(ALL) NOPASSWD: ALL
+# %sudo ALL=(ALL) NOPASSWD: ALL
 echo "permit <user> nopass" > /usr/etc/doas.conf # for doas
 
 # The above is the authors preference.
@@ -64,10 +65,7 @@ git clone https://github.com/moledoc/molelinux.git
 
 ```sh
 cd molelinux
-sudo sh .setup.sh
-# works without sudo as well,
-# but user then needs to input his/her passwords,
-# since sudo is used inside the script.
+sh .setup.sh
 ```
 
 * check with package manager is used and make symbolic link to correct aliases file. For example
