@@ -1,9 +1,12 @@
-"$TERM"
+"$TERM&"
     m:0x40 + c:36
     Mod4 + Return
 
-"nitrogen --set-zoom-fill --save --random $HOME/wallpapers"
+"nitrogen --set-zoom-fill --save --random $HOME/wallpapers &"
     m:0x41 + c:25
     Shift+Mod4 + w
 
+"$BROWSER &"
+    m:0x48 + c:56
+    Alt+Mod4 + b
 

@@ -7,7 +7,7 @@ xrdb -merge $HOME/.Xresources; xrdb -load $HOME/.Xresources &
 setxkbmap -option caps:swapescape
 nitrogen --restore &
 #xbindkeys -p &
-firefox &
+#firefox &
 guake --restore-preferences $HOME/.config/guake/.guakeconf &
 guake &
 

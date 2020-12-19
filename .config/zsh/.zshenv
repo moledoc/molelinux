@@ -22,4 +22,4 @@ export READER=zathura
 #export LOCK=slock
 
 ## Define fzf commands
-export FZF_DEFAULT_COMMAND='fdfind --hidden . /bin /usr/bin/ $HOME'
+export FZF_DEFAULT_COMMAND="fdfind --hidden --ignore-case --exclude '.mozilla' -E '.cache' -E '.local' . /bin /usr/bin/ $HOME"
