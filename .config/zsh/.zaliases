@@ -35,6 +35,7 @@ alias c="clear"
 ##	See specific dirs
 
 alias moledoc="$EDITOR $HOME/README.md"
+alias molesetup="$EDITOR $HOME/.setup.sh"
 alias repo="cd $HOME/Documents/molelinux"
 
 alias dl="cd $HOME/Downloads"

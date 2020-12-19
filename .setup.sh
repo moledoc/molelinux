@@ -11,8 +11,9 @@ updateCmd="sudo apt update;sudo apt upgrade"
 installCmd="apt install"
 
 # Download packages.
-packages="xterm zsh zsh-syntax-highlighting vim firefox fzf keepassxc redshift xbindkeys htop fd-find ripgrep zathura zathura-pdf-poppler mpv tmux"
-additional_pkg="neovim guake vlc nitrogen nemo" #tilda
+packages="xterm zsh zsh-syntax-highlighting guake neovim vim firefox fzf keepassxc redshift xbindkeys htop fd-find ripgrep zathura zathura-pdf-poppler mpv tmux nemo"
+additional_pkg="vlc nitrogen dconf-cli" #tilda
+# dconf-cli to load cinnamon keyboard shortcuts in/out
 
 if [ ! -z "$installCmd" ]
 then

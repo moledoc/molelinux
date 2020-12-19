@@ -1,0 +1,31 @@
+#!/bin/zsh
+
+# README: Script to open given file with defined default opener, depending on the file extension.
+
+# The first parameter is the filename from fzfOpen
+
+exclude='.git|.mozilla|.cache|.npm|.cargo|.ghc|.stack|.local|.pki|.pylint|.ipython|.jupyter'
+
+# extension=${1##*\.}
+
+case "$1" in
+  */bin/*)
+    $1 &
+    ;;
+  *.R|*.Rmd)
+    rstudio $1
+    ;;
+  *.pdf)
+    zathura $1
+    ;;
+  *.mp3|*.mp4)
+    mpv $1
+    ;;
+  *.jpg|*.jpeg|*.png)
+    xviewer $1
+    ;;
+  *.py|*.hs|*.txt|*.csv|*.md)
+    $EDITOR $1
+    ;;
+esac
+

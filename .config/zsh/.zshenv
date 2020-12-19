@@ -3,6 +3,7 @@
 export PATH=$PATH:$HOME/.scripts
 export XDG_CONFIG_HOME=$HOME/.config
 export EDITOR=nvim
+export R_EDITOR=rstudio
 export TERM=xterm
 export TERM_EXEC="$TERM -e" 
 export TERMINAL=$TERM
@@ -12,7 +13,7 @@ export HISTCONTROL=ignoreboth
 
 ## Set some defaults for opening programs.
 ## Defined for usage in scripts.
-export FILEMANAGER=thunar
+export FILEMANAGER=nemo
 #export IMAGES=sxiv
 export MEDIA=mpv
 export READER=zathura
@@ -21,4 +22,4 @@ export READER=zathura
 #export LOCK=slock
 
 ## Define fzf commands
-#export FZF_DEFAULT_COMMAND='fd --hidden . $HOME'
+export FZF_DEFAULT_COMMAND='fdfind --hidden . /bin /usr/bin/ $HOME'

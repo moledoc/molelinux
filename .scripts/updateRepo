@@ -9,6 +9,10 @@ sh $HOME/.scripts/readmeGen
 repo=$HOME/Documents/molelinux
 
 cp -RL $HOME/.config/zsh $repo/.config
+cp -RL $HOME/.config/cinnamonDE $repo/.config
 cp -RL $HOME/.scripts $repo/
 
 cp $HOME/.setup.sh $HOME/.vimrc $HOME/.xinitrc $HOME/.Xresources $HOME/.zprofile $HOME/.zshrc $HOME/README.md $HOME/.xbindkeysrc $HOME/.profile $repo
+
+dconf dump /org/cinnamon/desktop/keybindings/ > $HOME/.config/cinnamonDE/dconf-settings.conf # export
+

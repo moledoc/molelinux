@@ -73,7 +73,7 @@ sh .setup.sh
 ```sh
 ln -s $HOME/.config/zsh/.zPmAliases $HOME/.config/zsh/.aptAliases # Debian based
 ln -s $HOME/.config/zsh/.zPmAliases $HOME/.config/zsh/.pacmanAliases # Arch based
-```/
+```
 
 * The general setup should be done. Some tweaking might be necessary, but it is not covered in this readme.
 
@@ -82,7 +82,7 @@ ln -s $HOME/.config/zsh/.zPmAliases $HOME/.config/zsh/.pacmanAliases # Arch base
 This subsection describes authors preferences in programs.
 Also presents a list of most commonly used programs, fonts etc.
 
-* doas over sudo, but if there is no doas option sudo works fine. Also, for doas and sudo both I use nopass option (using doas/sudo doesn't require password). Just my preference.
+* doas over sudo, but if there is no doas option sudo works fine. Also, for doas and sudo both I use nopass option (using doas/sudo doesn\'t require password). Just my preference.
 * program: default (+ xterm just in case)
 
 	* program: drop down eg. guake, tilda
@@ -106,7 +106,7 @@ Also presents a list of most commonly used programs, fonts etc.
 * program: ripgrep (replacement for grep; faster)
 * program: (any gui filemanager is fine (nemo,thunar,pcmanfm,dolphin))
 * program: nitrogen (if there is no wallpaper handling in the DE or WM)
-* program: zathura (zathura-pdf-mupdf/-poppler; for viewing pdf's)
+* program: zathura (zathura-pdf-mupdf/-poppler; for viewing pdf\'s)
 * program: mpv (video and audio files); vlc for backup, explore mpd for music(?)
 * program: IDE for development (corresponding to the language, eg RStudio,Intellij)
 * program: tmux (multiplexer)
@@ -117,7 +117,26 @@ Also presents a list of most commonly used programs, fonts etc.
 
 ## Main keybindings
 
+Ground rules:
+
+* Window managing is centered around **super** key
+* nvim/vim managing is centered around **alt** key
+* (drop down) terminal managing is centered around **ctrl** key
+
 * **TODO**
+
+## Notes
+
+### Cinnamon DE
+
+* To import keyboard shortcuts, make sure dconf-cli package is installed.
+
+```sh
+dconf dump /org/cinnamon/desktop/keybindings/ > dconf-settings.conf # export
+dconf dump /org/cinnamon/desktop/keybindings/ < dconf-settings.conf # import
+```
+
+
 
 ## TODO
 
