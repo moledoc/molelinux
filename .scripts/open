@@ -51,7 +51,7 @@ if [ "$extension" = "$filename" ] || [ "$extension" = "*sh" ]
 then
   if [ "$1" = "launch" ]
   then
-    $file &
+    $SHELL $file &
   elif [ "$1" = "edit" ]
   then
     $TERM -e "$EDITOR $file"

@@ -3,16 +3,19 @@
 # README: Update the current build to set git repo directory.
 
 # run readmeGen
-sh $HOME/.scripts/readmeGen
+$SHELL $HOME/.scripts/readmeGen
 
 # define repository location
 repo=$HOME/Documents/molelinux
 
+dconf dump /org/cinnamon/desktop/keybindings/ > $HOME/.config/cinnamonDE/dconf-settings.conf # export (cinnamon keybindings)
+
 cp -RL $HOME/.config/zsh $repo/.config
 cp -RL $HOME/.config/cinnamonDE $repo/.config
+cp -RL $HOME/.config/RStudio $repo/.config
 cp -RL $HOME/.scripts $repo/
+
 
 cp $HOME/.setup.sh $HOME/.vimrc $HOME/.xinitrc $HOME/.Xresources $HOME/.zprofile $HOME/.zshrc $HOME/README.md $HOME/.xbindkeysrc $HOME/.profile $repo
 
-dconf dump /org/cinnamon/desktop/keybindings/ > $HOME/.config/cinnamonDE/dconf-settings.conf # export
 
