@@ -9,10 +9,13 @@ $SHELL $HOME/.scripts/readmeGen
 repo=$HOME/Documents/molelinux
 
 dconf dump /org/cinnamon/desktop/keybindings/ > $HOME/.config/cinnamonDE/dconf-settings.conf # export (cinnamon keybindings)
+guake --save-preferences $HOME/.config/guake/.guakeconf # save guake keybindings
 
 cp -RL $HOME/.config/zsh $repo/.config
 cp -RL $HOME/.config/cinnamonDE $repo/.config
 cp -RL $HOME/.config/RStudio $repo/.config
+cp -RL $HOME/.config/guake $repo/.config
+cp -RL $HOME/.config/tilda $repo/.config
 cp -RL $HOME/.scripts $repo/
 
 
