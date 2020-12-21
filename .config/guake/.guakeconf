@@ -34,7 +34,7 @@ window-width=100
 workspace-specific-tab-sets=true
 
 [keybindings/global]
-show-hide='<Primary>d'
+show-hide='F12'
 
 [keybindings/local]
 close-tab='<Primary><Shift>q'

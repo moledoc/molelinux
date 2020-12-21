@@ -13,7 +13,8 @@ guake --save-preferences $HOME/.config/guake/.guakeconf # save guake keybindings
 
 cp -RL $HOME/.config/zsh $repo/.config
 cp -RL $HOME/.config/cinnamonDE $repo/.config
-cp -RL $HOME/.config/RStudio $repo/.config
+cp -RL $HOME/.config/RStudio $repo/.config # Self added RStudio related files, such as gruvbox theme
+cp -RL $HOME/.config/rstudio $repo/.config # generated rstudio config. If rstudio is downloaded, it should recover all my settings
 cp -RL $HOME/.config/guake $repo/.config
 cp -RL $HOME/.config/tilda $repo/.config
 cp -RL $HOME/.scripts $repo/
