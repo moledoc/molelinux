@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1608468216,
+    "timestamp": 1608556367,
     "workspace": {
         "0": [
             [
@@ -17,6 +17,16 @@
                         {
                             "type": "term",
                             "directory": "/home/utt/Documents/molelinux"
+                        }
+                    ],
+                    "label": "Terminal",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/utt/.scripts"
                         }
                     ],
                     "label": "Terminal",

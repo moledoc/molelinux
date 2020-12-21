@@ -3,8 +3,7 @@
 # README: Script to open or focus given file with defined default opener, depending on the file extension.
 
 # file full path, filename and extension.
-file=$(fzfOpen)
-echo $file
+file=$(fzfOpen.zsh)
 filename=${file##*\/}
 extension=${filename##*\.}
 
@@ -19,42 +18,32 @@ fi
 case "$file" in
   */bin/*)
     $file &
-    exit
     ;;
   *.R|*.Rmd)
     rstudio $file &
-    exit
     ;;
   *.pdf)
     zathura $file &
-    exit
     ;;
   *.mp3|*.mp4)
     mpv $file &
-    exit
     ;;
   *.jpg|*.jpeg|*.png)
     $IMAGES $file &
-    exit
     ;;
   *.py|*.hs|*.txt|*.csv|*.md)
     $TERM -e "$EDITOR $file"
-    exit
+    ;;
+  *.*sh)
+    if [ "$1" = "launch" ]
+    then
+      $SHELL $file &
+    elif [ "$1" = "edit" ]
+    then
+      $TERM -e "$EDITOR $file"
+    fi
+    ;;
+  */.*)
+    $TERM -e "$EDITOR $file"
     ;;
 esac
-
-
-# If it weren't any case,
-# then check if it is a shell script.
-# if yes, then either edit or launch
-if [ "$extension" = "$filename" ] || [ "$extension" = "*sh" ]
-then
-  if [ "$1" = "launch" ]
-  then
-    $SHELL $file &
-  elif [ "$1" = "edit" ]
-  then
-    $TERM -e "$EDITOR $file"
-  fi
-  exit
-fi

@@ -3,7 +3,7 @@
 # README: Update the current build to set git repo directory.
 
 # run readmeGen
-$SHELL $HOME/.scripts/readmeGen
+$SHELL $HOME/.scripts/readmeGen.zsh
 
 # define repository location
 repo=$HOME/Documents/molelinux

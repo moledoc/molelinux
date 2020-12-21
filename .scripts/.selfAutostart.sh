@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# README: until I dig out how to add the autostarts to xinit or xsessions so that DE also grabs them, I'll start following processes manually via this script.
+# README: autostart my own programs and settings.
+# README-: until I dig out how to add the autostarts to xinit or xsessions so that DE also grabs them, I'll start following processes manually via this script.
 
 xrdb -merge $HOME/.Xresources; xrdb -load $HOME/.Xresources &
 #xsetroot -cursor_name left_ptr& # cursor
