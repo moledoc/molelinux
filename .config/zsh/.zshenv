@@ -1,6 +1,6 @@
 
 # Export variables
-export PATH=$PATH:$HOME/.scripts
+export PATH=$PATH:$HOME/.scripts:$HOME/.appimages
 export XDG_CONFIG_HOME=$HOME/.config
 export EDITOR=nvim
 export R_EDITOR=rstudio
@@ -17,6 +17,7 @@ export FILEMANAGER=nemo
 export IMAGES=xviewer #sxiv
 export MEDIA=mpv
 export READER=zathura
+export PASSWD="keepassxc"
 
 ## Set programs to lock computer.
 #export LOCK=slock

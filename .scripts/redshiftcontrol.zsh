@@ -7,7 +7,6 @@ cur_redshift="/tmp/cur_redshift"
 # Accepted $1 values are '+', '-', and '='
 
 # Set default redshift value to <default>
-
 default=6500
 change=500
 cur_val=$(< $cur_redshift)

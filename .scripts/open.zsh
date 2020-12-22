@@ -5,6 +5,7 @@
 # file full path, filename and extension.
 file=$(fzfOpen.zsh)
 filename=${file##*\/}
+filepath=${file%\/*}
 extension=${filename##*\.}
 
 # check if file param is empty
@@ -42,6 +43,9 @@ case "$file" in
     then
       $TERM -e "$EDITOR $file"
     fi
+    ;;
+  *.AppImage)
+    sudo chmod 666  /dev/ttyACM0; $filename &
     ;;
   */.*)
     $TERM -e "$EDITOR $file"
