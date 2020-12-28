@@ -4,6 +4,7 @@
 
 ## Current directory
 alias cur=". ~/.scripts/current.sh"
+# alias cur="cd -"
 
 ## Easier to move back.
 alias b="cd .."

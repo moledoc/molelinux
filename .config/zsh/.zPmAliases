@@ -9,6 +9,8 @@ alias update='sudo apt update;sudo apt upgrade'
 
 ## Install a program
 alias install="sudo apt install"
+## Install a .deb package
+alias ideb="sudo dpkg -i"
 
 ## Uninstall a program
 alias uninstall="sudo apt remove"

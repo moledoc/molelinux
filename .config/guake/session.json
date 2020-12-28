@@ -1,6 +1,6 @@
 {
     "schema_version": 2,
-    "timestamp": 1608675834,
+    "timestamp": 1609193506,
     "workspace": {
         "0": [
             [
@@ -8,7 +8,27 @@
                     "panes": [
                         {
                             "type": "term",
-                            "directory": "/home/utt"
+                            "directory": "/home/utt/Documents/showcase"
+                        }
+                    ],
+                    "label": "Terminal",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/utt/Documents/showcase/expenses-scala"
+                        }
+                    ],
+                    "label": "Terminal",
+                    "custom_label_set": false
+                },
+                {
+                    "panes": [
+                        {
+                            "type": "term",
+                            "directory": "/home/utt/Documents/showcase/expenses-scala"
                         }
                     ],
                     "label": "Terminal",

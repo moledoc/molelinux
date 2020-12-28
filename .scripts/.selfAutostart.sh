@@ -6,7 +6,7 @@
 xrdb -merge $HOME/.Xresources; xrdb -load $HOME/.Xresources &
 #xsetroot -cursor_name left_ptr& # cursor
 # setxkbmap -option caps:swapescape # not necessary with programmable keyboard
-nitrogen --restore &
+#nitrogen --restore &
 #xbindkeys -p &
 #firefox &
 guake --restore-preferences $HOME/.config/guake/.guakeconf &
@@ -14,9 +14,9 @@ guake &
 
 dconf dump /org/cinnamon/desktop/keybindings/ < $HOME/.config/cinnamonDE/dconf-settings.conf # import
 
-gruvbox_script='$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh'
-if [ -e "$gruvbox_script" ]
-then
-  sh $gruvbox_script &
-fi
+#gruvbox_script='$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh'
+#if [ -e "$gruvbox_script" ]
+#then
+#  sh $gruvbox_script &
+#fi
  
