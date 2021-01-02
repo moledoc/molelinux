@@ -10,9 +10,10 @@ xrdb -merge $HOME/.Xresources; xrdb -load $HOME/.Xresources &
 #xbindkeys -p &
 #firefox &
 guake --restore-preferences $HOME/.config/guake/.guakeconf &
-guake &
-
-dconf dump /org/cinnamon/desktop/keybindings/ < $HOME/.config/cinnamonDE/dconf-settings.conf # import
+#guake &
+# dconf dump /org/cinnamon/desktop/keybindings/ < $HOME/.config/cinnamonDE/dconf-settings.conf # import
+dconf load /org/cinnamon/desktop/keybindings/ < $HOME/.config/cinnamonDE/dconf-settings.conf # import cinnamon settings
+dconf load /org/gnome/terminal/ < $HOME/.config/gnome-terminal/dconf-settings.conf # import gnome-terminal settings
 
 gruvbox_script='$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh'
 if [ -e "$gruvbox_script" ]

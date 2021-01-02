@@ -4,7 +4,7 @@ compat-delete='delete-sequence'
 display-n=0
 gtk-prefer-dark-theme=true
 gtk-theme-name='Mint-Y-Dark-Orange'
-history-size=1000
+history-size=5000
 max-tab-name-length=100
 mouse-display=false
 open-tab-cwd=true
@@ -22,10 +22,10 @@ tab-close-buttons=true
 tab-ontop=false
 use-default-font=false
 use-popup=true
-use-scrollbar=false
+use-scrollbar=true
 use-trayicon=true
 window-halignment=0
-window-height=48
+window-height=37
 window-losefocus=true
 window-refocus=false
 window-tabbar=true
@@ -69,10 +69,10 @@ switch-tab9='<Primary>9'
 toggle-transparency='disabled'
 
 [style/background]
-transparency=98
+transparency=99
 
 [style/font]
 allow-bold=true
-palette='#66665c5c5454:#fbfb49493434:#8383a5a59898:#d7d799992121:#b1b162628686:#454585858888:#b8b8bbbb2626:#d6d65d5d0e0e:#a8a899998484:#fbfb49493434:#8e8ec0c07c7c:#fafabdbd2f2f:#d3d386869b9b:#68689d9d6a6a:#989897971a1a:#fefe80801919:#fafabdbd2626:#282828282828'
+palette='#282828282828:#cccc24241d1d:#989897971a19:#d7d799992120:#454585858888:#b1b162618685:#68689d9d6a6a:#a8a899998484:#929283837474:#fbfb49493434:#b8b8bbbb2626:#fafabdbc2f2f:#8383a5a59898:#d3d386869b9b:#8e8ec0c07c7b:#ebebdbdbb2b2:#fafabdbc2f2f:#282828282828'
 palette-name='Custom'
 style='Hermit Medium 10'
