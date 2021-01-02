@@ -7,11 +7,12 @@ echo "Set root passwd"
 sudo passwd
 
 # update repository
+# CHANGE ACCORDING TO PACKAGE MANAGER!!!
 updateCmd="sudo apt update;sudo apt upgrade"
 installCmd="apt install"
 
 # Download packages.
-packages="xterm zsh zsh-syntax-highlighting guake neovim vim firefox fzf keepassxc redshift xbindkeys htop fd-find ripgrep zathura zathura-pdf-poppler mpv tmux nemo"
+packages="xterm zsh zsh-syntax-highlighting guake neovim vim firefox fzf keepassxc redshift xbindkeys htop fd-find ripgrep zathura zathura-pdf-poppler mpv tmux nemo xclip"
 additional_pkg="vlc nitrogen dconf-cli wmctrl" #tilda
 # dconf-cli to load cinnamon keyboard shortcuts in/out
 # wmctrl to list window processes
@@ -49,6 +50,16 @@ read varEmail
 git config --global user.email "$varEmail"
 echo "Minimal git config set up"
 
+# create ssh key for github
+echo "Create ssh key for accessing git."
+mkdir $HOME/.ssh
+ssh-keygen -t rsa -b 4096 -C "$varEmail" -f $HOME/.ssh/github_key -P ""
+# change git remote from https to ssh
+echo "Change git remote from https to ssh"
+git remote set-url origin git@github.com:moledoc/molelinux.git  
+echo "Copy github_key.pub to clipboard"
+xclip -selection clipboard < $HOME/.ssh/github_key.pub
+
 # Copy contents of the repository to the right places.
 cp -r .scripts .config $HOME
 # cp .setup.sh .x* .X* .z* $HOME
@@ -78,4 +89,4 @@ sudo cp $HOME/.config/nvim/plugged/gruvbox/colors/gruvbox.vim /usr/share/vim/vim
 # sudo cp /usr/share/applications/guake.desktop /etc/xdg/autostart
 
 echo "Setup DONE!"
-
+echo "Visit github repo and add the ssh public key to allowed ssh keys (public key should be copied to the clipboard)!"
