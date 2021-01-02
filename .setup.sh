@@ -12,15 +12,16 @@ updateCmd="sudo apt update;sudo apt upgrade"
 installCmd="apt install"
 
 # Download packages.
-packages="xterm zsh zsh-syntax-highlighting guake neovim vim firefox fzf keepassxc redshift xbindkeys htop fd-find ripgrep zathura zathura-pdf-poppler mpv tmux nemo xclip"
+packages="xterm zsh zsh-syntax-highlighting guake neovim vim firefox fzf keepassxc redshift xbindkeys htop fd-find ripgrep zathura zathura-pdf-poppler mpv tmux nemo xclip wget"
 additional_pkg="vlc nitrogen dconf-cli wmctrl" #tilda
 # dconf-cli to load cinnamon keyboard shortcuts in/out
 # wmctrl to list window processes
+programming_pkg="r-base r-base-core r-base-dev"
 
 if [ ! -z "$installCmd" ]
 then
 	echo "Installing packages: $packages $additional_pkg"
-	sudo $installCmd $packages $additional_pkg
+	sudo $installCmd $packages $additional_pkg $programming_pkg
   echo "Packages installed"
 else
 	echo "Missing argument, exiting script!"
@@ -82,6 +83,33 @@ nvim +PlugInstall +qa
 # add gruvbox for vim as well
 echo "Add gruvbox colorscheme to vim colors"
 sudo cp $HOME/.config/nvim/plugged/gruvbox/colors/gruvbox.vim /usr/share/vim/vim81/colors
+
+echo "Setup RStudio"
+mkdir $HOME/Downloads
+cd $HOME/Downloads
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.1093-amd64.deb
+sudo dpkg -i rstudio-1.3.1093-amd64.deb
+
+echo "Install Bazecor for Dygma keyboard"
+wget https://github.com/Dygmalab/Bazecor/releases/download/bazecor-0.2.6/Bazecor-0.2.6.AppImage
+chmod +x Bazecor-0.2.6.AppImage
+cd $HOME
+
+
+echo "Is ssh key added to github? (if added, type 'yes')" 
+read hasSSHKey
+if [ "$hasSSHKey" = "yes" ]
+then
+  echo "Download other repositories"
+  eval $(ssh-agent -s);ssh-add $HOME/.ssh/github_key
+  git clone https://github.com/moledoc/wallpapers.git
+  cd $HOME/Documents
+  git clone https://github.com/moledoc/dygmaraise.git
+  #git clone https://github.com/moledoc/showcase.git
+  #git clone https://github.com/moledoc/parse.json.git
+  killall ssh-agent&
+  cd
+fi
 
 
 # # make guake dropdown terminal autostarting
