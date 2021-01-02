@@ -83,12 +83,12 @@ This subsection describes authors preferences in programs.
 Also presents a list of most commonly used programs, fonts etc.
 
 * doas over sudo, but if there is no doas option sudo works fine. Also, for doas and sudo both I use nopass option (using doas/sudo doesn\'t require password). Just my preference.
-* program: default (+ xterm just in case)
+* program: default terminal (+ xterm just in case)
 
-	* program: drop down eg. guake, tilda
+	* program: drop down terminal: guake (but tilda is ok too)
 
 * program: zsh (zsh-syntax-highlighting)
-* program: neovim(nvim)/vim (quick edits)
+* program: neovim(nvim)/vim (quick edits) / xed for GUI quick edits
 * program: firefox
 	
 	* vim bindings pluggin
@@ -97,7 +97,7 @@ Also presents a list of most commonly used programs, fonts etc.
 	* privacybadger plugin
 	* change privacy settings
 
-* program: fzf (also use as launcher; (?) use as fuzzy grep)
+* program: fzf (also use as launcher -- see .scripts/open.zsh)
 * program: keepassxc (password manager)
 * program: redshift
 * program: xbindkeys/sxhkd or WM/DE default keybindings editor.
@@ -114,6 +114,7 @@ Also presents a list of most commonly used programs, fonts etc.
 * font: fonts-hermit (might have different package name)
 * colorscheme: gruvbox colorscheme
 * options: swap caps and esc (not needed if programmable keyboard), setxkbmap -option caps:swapescape 
+* options: have keybindings for different language, eg setxkbmap -layout us
 
 ## Main keybindings
 
@@ -123,7 +124,6 @@ Ground rules:
 * nvim/vim managing is centered around **alt** key
 * (drop down) terminal managing is centered around **ctrl** key
 
-* **TODO**
 
 ## Notes
 
@@ -150,9 +150,6 @@ install.packages('xml2')
 
 * improve this README
 * make this build
-	
-	* port conf files (for nvim, vim etc)
-
 * Keep this build up-to-date
 
 ## Author
