@@ -3,10 +3,10 @@
 Generated with readmeGen script
 
 * fzfOpen.zsh: Run launcher using fzf, similar to dmenu and rofi
-* open.zsh: Script to open or focus given file with defined default opener, depending on the file extension.
 * readmeGen.zsh: Generate .script/ README. Generates description only for those scripts, that have README defined.
-* redshiftcontrol.zsh: Script to comfortably increase/decrease/reset redshift
+* open.zsh: Script to open or focus given file with defined default opener, depending on the file extension.
 * updateRepo.zsh: Update the current build to set git repo directory.
+* redshiftcontrol.zsh: Script to comfortably increase/decrease/reset redshift
 * .selfAutostart.sh: autostart my own programs and settings.
 
 # Author

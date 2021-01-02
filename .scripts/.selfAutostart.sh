@@ -14,9 +14,9 @@ guake &
 
 dconf dump /org/cinnamon/desktop/keybindings/ < $HOME/.config/cinnamonDE/dconf-settings.conf # import
 
-#gruvbox_script='$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh'
-#if [ -e "$gruvbox_script" ]
-#then
-#  sh $gruvbox_script &
-#fi
+gruvbox_script='$HOME/.config/nvim/plugged/gruvbox/gruvbox_256palette.sh'
+if [ -e "$gruvbox_script" ]
+then
+  sh $gruvbox_script &
+fi
  
