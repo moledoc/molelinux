@@ -12,7 +12,7 @@ updateCmd="sudo apt update;sudo apt upgrade"
 installCmd="apt install"
 
 # Download packages.
-packages="xterm zsh zsh-syntax-highlighting guake neovim vim firefox fzf keepassxc redshift xbindkeys htop fd-find ripgrep zathura zathura-pdf-poppler mpv tmux nemo xclip wget"
+packages="xterm zsh zsh-syntax-highlighting guake neovim vim firefox fzf keepassxc redshift xbindkeys htop fd-find ripgrep zathura zathura-pdf-poppler mpv tmux nemo xclip wget xed"
 additional_pkg="vlc nitrogen dconf-cli wmctrl" #tilda
 # dconf-cli to load cinnamon keyboard shortcuts in/out
 # wmctrl to list window processes
@@ -84,19 +84,21 @@ nvim +PlugInstall +qa
 echo "Add gruvbox colorscheme to vim colors"
 sudo cp $HOME/.config/nvim/plugged/gruvbox/colors/gruvbox.vim /usr/share/vim/vim81/colors
 
+# Add gruvbox theme to be accessible for xed text editor
+echo "Add gruvbox for xed"
+sudo cp $HOME/.config/gruvbox-xml/gruvbox-dark.xml /usr/share/gtksourceview-4/styles
+
+# Setup RStudio
 echo "Setup RStudio"
-mkdir $HOME/Downloads
-cd $HOME/Downloads
-wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.1093-amd64.deb
-sudo dpkg -i rstudio-1.3.1093-amd64.deb
+wget --output-file=$HOME/Downloads/rstudio.deb https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.1093-amd64.deb
+sudo dpkg -i $HOME/Downloads/rstudio.deb
 
+# Setup bazecor, the DygmaRaise keyboard tool.
 echo "Install Bazecor for Dygma keyboard"
-wget https://github.com/Dygmalab/Bazecor/releases/download/bazecor-0.2.6/Bazecor-0.2.6.AppImage
-chmod +x Bazecor-0.2.6.AppImage
-cd $HOME
+wget --output-file=$HOME/Documents/Bazecor.AppImage https://github.com/Dygmalab/Bazecor/releases/download/bazecor-0.2.6/Bazecor-0.2.6.AppImage
 
-
-echo "Is ssh key added to github? (if added, type 'yes')" 
+# pull additional repos, if ssh key is set.
+echo "Is ssh key added to github? (if added, type 'yes'; if not, but this is wanted, then do it now and then type 'yes')" 
 read hasSSHKey
 if [ "$hasSSHKey" = "yes" ]
 then
@@ -111,10 +113,9 @@ then
   cd
 fi
 
+# make guake dropdown terminal autostarting
+echo "Make guake dropdown terminal autostarting"
+sudo cp /usr/share/applications/guake.desktop /etc/xdg/autostart
 
-# # make guake dropdown terminal autostarting
-# echo "Make guake dropdown terminal autostarting"
-# sudo cp /usr/share/applications/guake.desktop /etc/xdg/autostart
-
+#echo "Visit github repo and add the ssh public key to allowed ssh keys (public key should be copied to the clipboard)!"
 echo "Setup DONE!"
-echo "Visit github repo and add the ssh public key to allowed ssh keys (public key should be copied to the clipboard)!"

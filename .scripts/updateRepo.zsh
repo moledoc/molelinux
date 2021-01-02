@@ -17,6 +17,7 @@ cp -RL $HOME/.config/RStudio $repo/.config # Self added RStudio related files, s
 cp -RL $HOME/.config/rstudio $repo/.config # generated rstudio config. If rstudio is downloaded, it should recover all my settings
 cp -RL $HOME/.config/guake $repo/.config
 cp -RL $HOME/.config/tilda $repo/.config
+cp -RL $HOME/.config/gruvbox-xml $repo/.config
 cp -RL $HOME/.scripts $repo/
 
 
