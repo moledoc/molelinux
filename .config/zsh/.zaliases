@@ -51,7 +51,7 @@ alias sc="cd $HOME/Documents/showcase"
 #alias roll="cd $HOME/Documents/Rolling_files"
 alias config="cd $HOME/.config"
 alias scripts="cd $HOME/.scripts"
-alias uni="cd $HOME/Documents/masters/III_semester" # alias for current semester
+alias uni="cd $HOME/Documents/masters_3semester" # alias for current semester
 
 
 #	##############
