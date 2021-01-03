@@ -32,7 +32,7 @@ case "$file" in
   *.jpg|*.jpeg|*.png)
     $IMAGES $file &
     ;;
-  *.py|*.hs|*.txt|*.csv|*.md)
+  *.py|*.hs|*.txt|*.csv|*.md|*.scala)
     $TERM -e "$EDITOR $file"
     ;;
   *.*sh)
@@ -48,6 +48,9 @@ case "$file" in
     sudo chmod 666  /dev/ttyACM0; $filename &
     ;;
   */.*)
+    $TERM -e "$EDITOR $file"
+    ;;
+  *)
     $TERM -e "$EDITOR $file"
     ;;
 esac
