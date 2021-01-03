@@ -148,7 +148,14 @@ alias gs="git status"
 alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push"
+alias gd="git diff"
+alias gl="git log"
 alias gpu="git pull"
+alias gcof="git checkout --"
+alias gco="git checkout" 
+alias gb="git branch"
+alias grb="git reset --hard"
+alias gr="git reset"
 
 ## Shortcut for weather (can specify the city, default is defined by locale)
 alias weather="curl wttr.in"
@@ -157,7 +164,11 @@ alias weather="curl wttr.in"
 #	#######
 #	Scripts
 
+# update git repository directory
 alias updateRepo='updateRepo.zsh'
+
+## open directoryu/go-to dir w/ fzf
+alias od='source opend.zsh'
 
 #### Shortcut to open new terminal in the same path.
 #alias ot="sh $HOME/.scripts/new_cur_term"
