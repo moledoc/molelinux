@@ -9,6 +9,7 @@ $SHELL $HOME/.scripts/readmeGen.zsh
 repo=$HOME/Documents/molelinux
 
 dconf dump /org/cinnamon/desktop/keybindings/ > $HOME/.config/cinnamonDE/dconf-settings.conf # export (cinnamon keybindings)
+dconf dump /org/cinnamon/theme/ > $HOME/.config/cinnamonDE/theme-settings.conf # export theme settings
 dconf dump /org/gnome/terminal/ > $HOME/.config/gnome-terminal/dconf-settings.conf # gnome-terminal settings
 guake --save-preferences $HOME/.config/guake/.guakeconf # save guake keybindings
 
