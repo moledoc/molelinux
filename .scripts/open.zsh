@@ -44,8 +44,11 @@ case "$file" in
       $TERM -e "$EDITOR $file"
     fi
     ;;
+  *Bazecor*.AppImage)
+    sudo chmod 666  /dev/ttyACM0; $file&
+    ;;
   *.AppImage)
-    sudo chmod 666  /dev/ttyACM0; $filename &
+    $file&
     ;;
   */.*)
     $TERM -e "$EDITOR $file"

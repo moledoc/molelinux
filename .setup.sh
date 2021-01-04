@@ -95,7 +95,10 @@ sudo dpkg -i $HOME/Downloads/rstudio.deb
 
 # Setup bazecor, the DygmaRaise keyboard tool.
 echo "Install Bazecor for Dygma keyboard"
-wget --output-file=$HOME/Documents/Bazecor.AppImage https://github.com/Dygmalab/Bazecor/releases/download/bazecor-0.2.6/Bazecor-0.2.6.AppImage
+mkdir $HOME/.AppImages
+echo "Directory $HOME/.AppImages made"
+wget --output-file=$HOME/.AppImages/Bazecor.AppImage https://github.com/Dygmalab/Bazecor/releases/download/bazecor-0.2.6/Bazecor-0.2.6.AppImage
+chmod +x $HOME/.AppImages/Bazecor.AppImage
 
 # pull additional repos, if ssh key is set.
 echo "Is ssh key added to github? (if added, type 'yes'; if not, but this is wanted, then do it now and then type 'yes')" 
