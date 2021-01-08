@@ -17,7 +17,7 @@ alias uninstall="sudo apt remove"
 ## remove leftover files
 alias purge="sudo apt purge"
 ## remove autoinstalled packages
-#alias autoremove="sudo apt autoremove"
+alias autoremove="sudo apt autoremove"
 
 ## satisfy dependencies
 # sudo apt satisfy

@@ -5,7 +5,6 @@ export XDG_CONFIG_HOME=$HOME/.config
 export EDITOR=nvim
 export R_EDITOR=rstudio
 export TERM=xterm
-export TERM_EXEC="$TERM -e" 
 export TERMINAL=$TERM
 #export BROWSER="firefox --private-window"
 export BROWSER="firefox"

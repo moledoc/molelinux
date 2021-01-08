@@ -17,5 +17,9 @@
     "warn_variable_defined_but_not_used": true,
     "style_diagnostics": true,
     "terminal_bell_style": "none",
-    "default_project_location": "~/Documents"
+    "default_project_location": "~/Documents",
+    "document_author": "Meelis Utt",
+    "num_spaces_for_tab": 1,
+    "use_spaces_for_tab": false,
+    "doc_outline_show": "all"
 }
