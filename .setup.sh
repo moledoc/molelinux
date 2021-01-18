@@ -16,6 +16,7 @@ packages="xterm zsh zsh-syntax-highlighting guake neovim vim firefox fzf keepass
 additional_pkg="vlc nitrogen dconf-cli wmctrl" #tilda
 # dconf-cli to load cinnamon keyboard shortcuts in/out
 # wmctrl to list window processes
+# cheese - webcam frontend app
 programming_pkg="r-base r-base-core r-base-dev"
 
 if [ ! -z "$installCmd" ]

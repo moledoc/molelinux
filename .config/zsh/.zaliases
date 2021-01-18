@@ -28,6 +28,7 @@ alias cp="cp -v"
 alias mv="mv -v"
 ## Colored grep (ripgrep)
 alias grep="rg --color=always --smart-case"
+# alias grep="grep --color=always"
 
 ## Easier to clear terminal
 alias c="clear"
@@ -51,7 +52,7 @@ alias sc="cd $HOME/Documents/showcase"
 #alias roll="cd $HOME/Documents/Rolling_files"
 alias config="cd $HOME/.config"
 alias scripts="cd $HOME/.scripts"
-alias uni="cd $HOME/Documents/masters_3semester" # alias for current semester
+alias uni="cd $HOME/Documents/master_thesis" # alias for current semester
 
 
 #	##############
